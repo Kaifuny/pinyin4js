@@ -6,7 +6,6 @@
 import { chinese_dict } from "./dict/chinese.dict.js"
 import { mutil_pinyin_dict } from "./dict/mutil_pinyin.dict.js"
 import { pinyin_dict } from "./dict/pinyin.dict.js"
-
 export class PinyinResource {
     static getPinyinResource() {
         return pinyin_dict;
@@ -21,7 +20,6 @@ export class PinyinResource {
         for(var key in mutil_pinyin_dict) {
             dict[mutil_pinyin_dict[key]] = key;
         }
-        dict;
         return dict;
     }
 

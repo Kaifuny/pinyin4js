@@ -4,11 +4,12 @@
  * @auth superbiger(superbiger@qq.com)
  */
 import { PinyinResource } from "./PinyinResource.js"
+import { ChineseHelper } from "./ChineseHelper.js"
 
 export var PinyinFormat = {
     WITH_TONE_MARK      :"WITH_TONE_MARK",  //带声调
     WITHOUT_TONE        :"WITHOUT_TONE",    //不带声调
-    WITH_TONE_NUMBER    :"WITH_TONE_NUMBER" //带声调数字尾缀
+    WITH_TONE_NUMBER    :"WITH_TONE_NUMBER" //数字代表声调
 }
 
 var PINYIN_TABLE = PinyinResource.getPinyinResource();  //词组字典
@@ -72,16 +73,34 @@ export class PinyinHelper {
      * @param {PinyinFormat} format 拼音格式：WITH_TONE_NUMBER--数字代表声调，WITHOUT_TONE--不带声调，WITH_TONE_MARK--带声调
      */
     static _formatPinyin(str, format) {
-        if (pinyinFormat == PinyinFormat.WITH_TONE_MARK) {
-			return pinyinString.split(PINYIN_SEPARATOR);
-		} else if (pinyinFormat == PinyinFormat.WITH_TONE_NUMBER) {
-			return this._convertWithToneNumber(pinyinString);
-		} else if (pinyinFormat == PinyinFormat.WITHOUT_TONE) {
-			return this._convertWithoutTone(pinyinString);
+        if (format == PinyinFormat.WITH_TONE_MARK) {
+			return str.split(PINYIN_SEPARATOR);
+		} else if (format == PinyinFormat.WITH_TONE_NUMBER) {
+			return this._convertWithToneNumber(str);
+		} else if (format == PinyinFormat.WITHOUT_TONE) {
+			return this._convertWithoutTone(str);
 		}
-		return [""];
+		return [];
     }
 
+    /**
+     * 将单个汉字转换为相应格式的拼音
+     * 
+     * @param {string/char} c 
+     * @param {PinyinFormat} format 拼音格式：WITH_TONE_NUMBER--数字代表声调，WITHOUT_TONE--不带声调，WITH_TONE_MARK--带声调
+     */
+    static _convertToPinyinArray(c, format) {
+        var pinyin = PINYIN_TABLE[c];
+        if(typeof(pinyin) != "undefined") {
+            var arr = [];
+            var pinyinArray = this._formatPinyin(pinyin, format);
+            for(var i = 0; i < pinyinArray.length; i++){
+                arr.push(pinyinArray[i]);
+            }
+            return arr;
+        }
+        return [];
+    }
     /**
      * 将字符串转换成相应格式的拼音
      * @param {string} str 
@@ -89,6 +108,49 @@ export class PinyinHelper {
      * @param {PinyinFormat} format 拼音格式：WITH_TONE_NUMBER--数字代表声调，WITHOUT_TONE--不带声调，WITH_TONE_MARK--带声调
      */
     static convertToPinyinString(str, separator, format) {
+        str = ChineseHelper.convertToSimplifiedChinese(str);
+        var i = 0;
+        var strLen = str.length;
+        var str_result = '';
+        while(i < strLen) {
+            var subStr = str.substring(i);
+            var commonPrefixList = '';
+            if(commonPrefixList.size() == 0) { //不是词组
+                var c = str.charAt(i);
+                if(ChineseHelper.isChinese(c) || c == CHINESE_LING) {
+                    var pinyinArray = this._convertToPinyinArray(c, format);
+                    if(pinyinArray.length > 0) {
+                        str_result += pinyinArray[0];
+                    }else{
+                        str_result += str.charAt(i)
+                    }
+                } else {
+                    str_result += c;
+                }
+                i++;
+            } else { //是词组
+                var words = REVERSER_MUTIL_PINYIN_TABLE[commonPrefixList[commonPrefixList.length - 1]];
+                var pinyinArray = _formatPinyin(MUTIL_PINYIN_TABLE[words], format);
+                for(let j=0, l = pinyinArray.length; j < l; j++) {
+                    str_result += pinyinArray[j];
+                    if(j < l - 1) {
+                        str_result += separator
+                    }
+                }
+                i += words.length;
+            }
+            if( i < strLen) {
+                str_result += separator;
+            }
+        }
+        return str_result;
+    }
+
+    /**
+     * 获取字符串对应拼音的首字母
+     * @param {string} str 
+     */
+    static getShortPinyin(str) {
 
     }
 
@@ -97,14 +159,6 @@ export class PinyinHelper {
      * @param {string/char} c 
      */
     static hasMultiPinyin(c) {
-
-    }
-
-    /**
-     * 获取字符串对应拼音的首字母
-     * @param {string} str 
-     */
-    static getShortPinyin(str) {
 
     }
 

@@ -6,6 +6,9 @@
 > pinyin4js是一个汉字转拼音的Javascript开源库  
 > A opensource javascript library for converting chinese to pinyin  
 
+## WARNING
+version 1.0.0 can be used, developing!!
+
 ## Features
 
 * **词库灵活导入,打包**   
