@@ -3,6 +3,8 @@
  * 
  * @auth superbiger(superbiger@qq.com)
  */
+import { PinyinResource } from "./PinyinResource.js"
+
 export var PinyinFormat = {
     WITH_TONE_MARK      :"WITH_TONE_MARK",  //带声调
     WITHOUT_TONE        :"WITHOUT_TONE",    //不带声调
@@ -23,7 +25,30 @@ export class PinyinHelper {
      * @param {string/char} str 
      */
     static _convertWithToneNumber(str) {
-
+        var pinyinArray = str.split(PINYIN_SEPARATOR);
+        
+        for(var i=pinyinArray.length -1; i >=0; i--) {
+            var hasMarkedChar = false;
+            var originalPinyin = pinyinArray[i].replace("ü", "v");
+            
+            for(var j=originalPinyin.length - 1; j >= 0; j--) {
+                var originalChar = originalPinyin.charAt(j);
+                if(originalChar < 'a' || originalChar > 'z') {
+                    var indexInAllMarked = ALL_MARKED_VOWEL.indexOf(originalChar);
+                    var toneNumber = indexInAllMarked % 4 + 1;
+                    var replaceChar = ALL_UNMARKED_VOWEL.charAt((indexInAllMarked - indexInAllMarked % 4) / 4);
+                    
+                    pinyinArray[i] = originalPinyin.replace(originalChar, replaceChar) + toneNumber;
+                    hasMarkedChar = true;
+                    break;
+                }
+            }
+            if(!hasMarkedChar) {
+                // 找不到带声调的拼音字母说明是轻声，用数字5表示
+                pinyinArray[i] = originalPinyin + "5";
+            }
+        }
+        return pinyinArray;
     }
 
     /**
@@ -31,7 +56,14 @@ export class PinyinHelper {
      * @param {string/char} str 
      */
     static _convertWithoutTone(str) {
-        
+        var pinyinArray;
+        for(var i = ALL_MARKED_VOWEL.length - 1; i >= 0; i--) {
+            var originalChar = ALL_MARKED_VOWEL.charAt(i);
+            var replaceChar = ALL_UNMARKED_VOWEL.charAt((i - i % 4) / 4);
+            str = str.replace(originalChar, replaceChar);
+        }
+        pinyinArray = str.replace("ü", "v").split(PINYIN_SEPARATOR);
+        return pinyinArray;
     }
 
     /**

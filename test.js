@@ -1,5 +1,5 @@
 import {
-    PinyinResource
-} from "./src/PinyinResource"
+    PinyinHelper
+} from "./src/PinyinHelper"
 
-console.log(PinyinResource.getMutilPinyinReverseResource());
+console.log(PinyinHelper._convertWithoutTone("ā,luó,hàn"));
