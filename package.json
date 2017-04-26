@@ -1,32 +1,32 @@
 {
-    "name":"pinyin4js",
-    "description": "A opensource java library for converting chinese to pinyin",
-    "version":"0.0.5",
-    "author":"superbiger",
-    "license": "MIT",
-    "keywords": [
-        "javascript",
-        "ES6 ES5",
-        "js util",
-        "pinyin",
-        "拼音"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/superbiger/pinyin4js.git"
-    },
-    "bugs": {
-        "url": "https://github.com/superbiger/pinyin4js/issues"
-    },
-    "scripts": {
-    },
-    "devDependencies": {
-        "babel-cli": "^6.0.0",
-        "babel-core": "^6.18.0",
-        "babel-polyfill": "^6.16.0",
-        "babel-preset-es2015": "^6.18.0",
-        "mocha": "^3.1.2",
-        "mocha-traceur": "^2.1.0",
-        "should": "^11.1.1"
-    }
+  "name": "pinyin4js",
+  "description": "A opensource java library for converting chinese to pinyin",
+  "version": "0.0.5",
+  "author": "superbiger",
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "ES6 ES5",
+    "js util",
+    "pinyin",
+    "拼音"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/superbiger/pinyin4js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/superbiger/pinyin4js/issues"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-core": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "mocha": "^3.1.2",
+    "mocha-traceur": "^2.1.0",
+    "should": "^11.1.1",
+    "webpack": "^2.4.1"
+  }
 }

@@ -15,14 +15,6 @@ export class PinyinResource {
         return mutil_pinyin_dict;
     }
 
-    static getMutilPinyinReverseResource() {
-        var dict = {}
-        for(var key in mutil_pinyin_dict) {
-            dict[mutil_pinyin_dict[key]] = key;
-        }
-        return dict;
-    }
-
     static getChineseResource() {
         return chinese_dict;
     }

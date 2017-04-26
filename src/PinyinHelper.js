@@ -114,8 +114,8 @@ export class PinyinHelper {
         var str_result = '';
         while(i < strLen) {
             var subStr = str.substring(i);
-            var commonPrefixList = '';
-            if(commonPrefixList.size() == 0) { //不是词组
+            var commonPrefixList = ''; //词组字典有的情况返回该起点下分词数组，没有的情况返回空数组
+            if(commonPrefixList.length == 0) { //不是词组
                 var c = str.charAt(i);
                 if(ChineseHelper.isChinese(c) || c == CHINESE_LING) {
                     var pinyinArray = this._convertToPinyinArray(c, format);
@@ -129,7 +129,7 @@ export class PinyinHelper {
                 }
                 i++;
             } else { //是词组
-                var words = REVERSER_MUTIL_PINYIN_TABLE[commonPrefixList[commonPrefixList.length - 1]];
+                var words = MUTIL_PINYIN_TABLE[commonPrefixList[commonPrefixList.length - 1]];
                 var pinyinArray = _formatPinyin(MUTIL_PINYIN_TABLE[words], format);
                 for(let j=0, l = pinyinArray.length; j < l; j++) {
                     str_result += pinyinArray[j];
