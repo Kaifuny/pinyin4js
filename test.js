@@ -1,5 +1,5 @@
 import {
-    ChineseHelper
-} from "./src/ChineseHelper"
+    PinyinResource
+} from "./src/PinyinResource"
 
-console.log(ChineseHelper.convertToSimplifiedChinese("臺萬與"));
+console.log(PinyinResource.getMutilPinyinReverseResource());
