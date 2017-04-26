@@ -4,7 +4,7 @@
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/v/pinyin4js.svg" alt="Version"></a>
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>
 > pinyin4js是一个汉字转拼音的Javascript开源库  
-> A opensource java library for converting chinese to pinyin  
+> A opensource javascript library for converting chinese to pinyin  
 
 ## Features
 
