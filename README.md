@@ -38,7 +38,7 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 
 * **USE**
 
-# How to Dev
+## How to Dev
 
 * **Init**
 ```
