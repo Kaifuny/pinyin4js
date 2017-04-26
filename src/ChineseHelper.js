@@ -13,7 +13,7 @@ export class ChineseHelper {
      * 将单个繁体字转换为简体字
      * @param {string/char} c
      */
-    static convertCharToSimplifiedChinese(c) {
+    static _convertCharToSimplifiedChinese(c) {
         var simplifiedChinese = CHINESE_MAP[c];
         if(typeof(simplifiedChinese) == "undefined") {
             return c;
@@ -25,7 +25,7 @@ export class ChineseHelper {
      * 将单个简体字转换为繁体字
      * @param {string/char} c
      */
-    static convertCharToTraditionalChinese(c) {
+    static _convertCharToTraditionalChinese(c) {
         for(var key in CHINESE_MAP) {
             if(CHINESE_MAP[key] == c) {
                 return key;
@@ -42,7 +42,7 @@ export class ChineseHelper {
         var result = '';
         for(var i=0; i < str.length; i++) {
             var c = str.charAt(i);
-            result += this.convertCharToSimplifiedChinese(c);
+            result += this._convertCharToSimplifiedChinese(c);
         }
         return result;
     }
@@ -55,7 +55,7 @@ export class ChineseHelper {
         var result = '';
         for(var i=0; i < str.length; i++) {
             var c = str.charAt(i);
-            result += this.convertCharToTraditionalChinese(c);
+            result += this._convertCharToTraditionalChinese(c);
         }
         return result;
     }
