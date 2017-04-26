@@ -1,4 +1,8 @@
 ## pinyin4js
+<a href="https://circleci.com/gh/superbiger/pinyin4js/master"><img src="https://img.shields.io/circleci/project/superbiger/pinyin4js/master.svg" alt="Build Status"></a>
+<a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/dt/pinyin4js.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/v/pinyin4js.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>
 > pinyin4js是一个汉字转拼音的Javascript开源库  
 > A opensource java library for converting chinese to pinyin  
 
