@@ -19,8 +19,6 @@
         "url": "https://github.com/superbiger/pinyin4js/issues"
     },
     "scripts": {
-        "build": "babel src/util -d dist",
-        "test": "mocha --compilers js:mocha-traceur test"
     },
     "devDependencies": {
         "babel-cli": "^6.0.0",
