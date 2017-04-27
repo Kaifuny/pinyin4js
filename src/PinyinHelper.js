@@ -12,8 +12,8 @@ export var PinyinFormat = {
     WITH_TONE_NUMBER    :"WITH_TONE_NUMBER" //数字代表声调
 }
 
-var PINYIN_TABLE = PinyinResource.getPinyinResource();  //词组字典
-var MUTIL_PINYIN_TABLE = PinyinResource.getMutilPinyinResource();  //单字字典
+var PINYIN_TABLE = PinyinResource.getPinyinResource();  //单字字典
+var MUTIL_PINYIN_TABLE = PinyinResource.getMutilPinyinResource();  //词组字典
 var PINYIN_SEPARATOR = ","; //拼音分隔符
 var CHINESE_LING = '〇';
 var ALL_UNMARKED_VOWEL = "aeiouv";
@@ -100,6 +100,23 @@ export class PinyinHelper {
         }
         return [];
     }
+
+    /**
+     * 获取给定字符串是否在字典中找到词组拼音对应关系
+     * 
+     * 简化操作 暂时只支持4字以内字典检测
+     * @param {string} str 
+     */
+    static _getWords(str) {
+        for(var i = 1; i < 4; i++) {
+            var temp = MUTIL_PINYIN_TABLE[str.substring(0, i)];
+            if(typeof(temp) != 'undefined'){
+                return [str.substring(0, i)];
+            }
+        }
+        return [];
+    }
+
     /**
      * 将字符串转换成相应格式的拼音
      * @param {string} str 
@@ -113,7 +130,7 @@ export class PinyinHelper {
         var str_result = '';
         while(i < strLen) {
             var subStr = str.substring(i);
-            var commonPrefixList = ''; //词组字典有的情况返回该起点下分词数组，没有的情况返回空数组
+            var commonPrefixList = this._getWords(subStr); //词组字典有的情况返回该起点下分词数组，没有的情况返回空数组
             if(commonPrefixList.length == 0) { //不是词组
                 var c = str.charAt(i);
                 if(ChineseHelper.isChinese(c) || c == CHINESE_LING) {
@@ -128,8 +145,8 @@ export class PinyinHelper {
                 }
                 i++;
             } else { //是词组
-                var words = MUTIL_PINYIN_TABLE[commonPrefixList[commonPrefixList.length - 1]];
-                var pinyinArray = _formatPinyin(MUTIL_PINYIN_TABLE[words], format);
+                var words = commonPrefixList[commonPrefixList.length - 1];
+                var pinyinArray = this._formatPinyin(MUTIL_PINYIN_TABLE[words], format);
                 for(let j=0, l = pinyinArray.length; j < l; j++) {
                     str_result += pinyinArray[j];
                     if(j < l - 1) {
@@ -150,7 +167,7 @@ export class PinyinHelper {
      * @param {string} str 
      */
     static getShortPinyin(str) {
-
+        
     }
 
     /**

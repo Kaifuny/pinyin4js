@@ -119,7 +119,7 @@ var ChineseHelper = exports.ChineseHelper = function () {
         key: "containsChinese",
         value: function containsChinese(str) {
             for (var i = 0; i < str.length; i++) {
-                if (str.charAt(i)) {
+                if (this.isChinese(str.charAt(i))) {
                     return true;
                 }
             }
