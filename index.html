@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript" src="./dist/pinyin4js.js" charset="utf-8"></script>
+        <script>
+            console.log(ChineseHelper.convertToSimplifiedChinese('臺喪麗'))
+            console.log(ChineseHelper.convertToTraditionalChinese('台丧丽'))
+            console.log(ChineseHelper.containsChinese('12台丧丽'))
+            console.log(ChineseHelper.containsChinese('123'))
+            console.log(ChineseHelper.isTraditionalChinese('臺'))
+            console.log(ChineseHelper.isTraditionalChinese('台'))
+            console.log(ChineseHelper.isChinese('台'))
+            console.log(ChineseHelper.isChinese('3'))
+
+            console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_MARK))
+            console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '#', PinyinFormat.WITH_TONE_MARK))
+            console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITHOUT_TONE))
+            console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_NUMBER))
+            console.log(PinyinHelper.getShortPinyin('厦门你好大厦厦门'))
+        </script>
+    </body>
+</html>
