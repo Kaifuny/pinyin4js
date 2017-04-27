@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "babel src -d libs",
-    "build-browser":"webpack -p browser_index.js ./dist/pinyin4js.js",
+    "build-browser":"webpack -p index.js ./dist/pinyin4js.js",
     "test": "mocha --compilers js:mocha-traceur test"
   },
   "devDependencies": {
