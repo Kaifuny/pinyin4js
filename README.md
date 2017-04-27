@@ -3,11 +3,12 @@
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/dt/pinyin4js.svg" alt="Downloads"></a>
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/v/pinyin4js.svg" alt="Version"></a>
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>
-> pinyin4js是一个汉字转拼音的Javascript开源库  
+> pinyin4js是一个汉字转拼音的Javascript开源库-零依赖  
 > A opensource javascript library for converting chinese to pinyin  
 Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)  
 
 ## Features
+* **零依赖**  
 
 * **词库灵活导入,打包**   
 可以自行调整字典，具体可以参照src/dict；所有资源调用由PinyinResource封装，可自行修改后打包
