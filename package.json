@@ -1,7 +1,7 @@
 {
   "name": "pinyin4js",
   "description": "A opensource java library for converting chinese to pinyin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "superbiger",
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,10 @@
   "bugs": {
     "url": "https://github.com/superbiger/pinyin4js/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "babel src -d libs",
+    "test": "mocha --compilers js:mocha-traceur src/test"
+  },
   "devDependencies": {
     "babel-cli": "^6.0.0",
     "babel-core": "^6.18.0",

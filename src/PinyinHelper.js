@@ -14,7 +14,6 @@ export var PinyinFormat = {
 
 var PINYIN_TABLE = PinyinResource.getPinyinResource();  //词组字典
 var MUTIL_PINYIN_TABLE = PinyinResource.getMutilPinyinResource();  //单字字典
-var REVERSER_MUTIL_PINYIN_TABLE = PinyinResource.getMutilPinyinReverseResource();   //反向索引 单字字典（MUTIL_PINYIN_TABLE）
 var PINYIN_SEPARATOR = ","; //拼音分隔符
 var CHINESE_LING = '〇';
 var ALL_UNMARKED_VOWEL = "aeiouv";

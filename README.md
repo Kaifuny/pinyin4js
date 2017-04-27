@@ -5,7 +5,7 @@
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>
 > pinyin4js是一个汉字转拼音的Javascript开源库  
 > A opensource javascript library for converting chinese to pinyin  
-
+Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
 ## WARNING
 version 1.0.0 can be used, developing!!
 
@@ -40,7 +40,18 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 ```
 
 * **USE**
-
+```javascript
+    //ES5
+    var PinyinFormat = require("pinyin4js").PinyinFormat;
+    var PinyinHelper = require("pinyin4js").PinyinHelper;
+    var ChineseHelper = require("pinyin4js").ChineseHelper;
+    //ES6
+    import {
+        PinyinFormat,
+        PinyinHelper,
+        ChineseHelper
+    } from 'pinyin4js';
+```
 ## How to Dev
 
 * **Init**
