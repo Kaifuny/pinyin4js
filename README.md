@@ -42,15 +42,10 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 * **USE**
 ```javascript
     //ES5
-    var PinyinFormat = require("pinyin4js").PinyinFormat;
-    var PinyinHelper = require("pinyin4js").PinyinHelper;
-    var ChineseHelper = require("pinyin4js").ChineseHelper;
-    //ES6
-    import {
-        PinyinFormat,
-        PinyinHelper,
-        ChineseHelper
-    } from 'pinyin4js';
+    require("pinyin4js"); //import 'pinyin4js';
+
+    // more detail methods in test
+    console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '#', PinyinFormat.WITH_TONE_MARK))
 ```
 ## How to Dev
 
