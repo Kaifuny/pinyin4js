@@ -45,6 +45,7 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
     require("pinyin4js"); //import 'pinyin4js';
 
     // more detail methods in test
+    // output: xià#mén#nǐ#hǎo#dà#shà#xià#mén
     console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '#', PinyinFormat.WITH_TONE_MARK))
 ```
 ## How to Dev
