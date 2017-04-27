@@ -31,7 +31,9 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 
 * **INSTALL**
 > Brower
-
+```html
+    <script src="./dist/pinyin4js.js"></script>
+```
 > Node
 ```
     npm install pinyin4js
