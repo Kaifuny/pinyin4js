@@ -7,9 +7,6 @@
 > A opensource javascript library for converting chinese to pinyin  
 Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)  
 
-## WARNING
-version 1.0.0 can be used, developing!!
-
 ## Features
 
 * **词库灵活导入,打包**   

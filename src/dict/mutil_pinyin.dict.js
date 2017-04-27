@@ -830,5 +830,6 @@ export var mutil_pinyin_dict = {
     "膀胱":"páng,guāng",
     "膀肿":"pāng,zhǒng",
     "膀胱区疼痛":"páng,guāng,qū,téng,tòng",
-    "膀胱镜":"páng,guāng,jìng"
+    "膀胱镜":"páng,guāng,jìng",
+    "洪洞":"hóng,dòng"
 }

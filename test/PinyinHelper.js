@@ -18,9 +18,8 @@ describe("# PinyinHelper", function() {
         })
     })
     describe("* getShortPinyin(str)", function() {
-        
-    })
-    describe("* hasMultiPinyin(c)", function() {
-        
+        it("PinyinHelper.getShortPinyin('厦门你好大厦厦门') = 'xmnhdsxm'", function(){
+            PinyinHelper.getShortPinyin('厦门你好大厦厦门').should.eql('xmnhdsxm')
+        })
     })
 })
