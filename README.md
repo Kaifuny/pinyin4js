@@ -60,7 +60,7 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 * **Build Browser**
 ```
     npm run build
-    npm run build-browers
+    npm run build-browser
 ```
 * **Test**
 ```

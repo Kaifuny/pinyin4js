@@ -1,7 +1,7 @@
 {
   "name": "pinyin4js",
   "description": "A opensource java library for converting chinese to pinyin",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "superbiger",
   "license": "MIT",
   "keywords": [
