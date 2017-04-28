@@ -1,37 +1,19 @@
 [[English Document](https://github.com/superbiger/pinyin4js/blob/master/README.md)]
 [[中文文档](https://github.com/superbiger/pinyin4js/blob/master/README.md)]
- 
+
 ## pinyin4js  
 <a href="https://circleci.com/gh/superbiger/pinyin4js/master"><img src="https://img.shields.io/circleci/project/superbiger/pinyin4js/master.svg" alt="Build Status"></a>
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/dt/pinyin4js.svg" alt="Downloads"></a>
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/v/pinyin4js.svg" alt="Version"></a>
-<a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>
-> pinyin4js是一个汉字转拼音的Javascript开源库-零依赖  
+<a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>  
 > A opensource javascript library for converting chinese to pinyin  
 Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)  
 
 ## Features
-* **零依赖**  
-
-* **词库灵活导入,打包**   
-可以自行调整字典，具体可以参照src/dict；所有资源调用由PinyinResource封装，可自行修改后打包  
-
-* **准确、完善的字库**  
-Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js能转换除46个异体字（异体字不存在标准拼音）之外的所有汉字  
-
-* **拼音转换速度快**  
-经测试，从4E00-9FA5范围的20902个汉字，pinyin4js耗时约110毫秒
-
-* **多拼音格式输出支持**  
-支持多种拼音输出格式：带音标、不带音标、数字表示音标以及拼音首字母输出格式  
-
-* **常见多音字识别**  
-支持常见多音字的识别，其中包括词组、成语、地名等  
-
-* **简繁体中文转换**  
-
-* **支持添加自定义字典**  
-支持添加用户自定义字典
+* **Zero-dependency**  
+* **Folk & Package yourself easily**    
+* **Support Traditional and Simplified Chinese**  
+* **Support multiple pinyin style**  
 
 ## How to use
 
