@@ -132,14 +132,14 @@ var PinyinHelper = exports.PinyinHelper = function () {
         /**
          * 获取给定字符串是否在字典中找到词组拼音对应关系
          * 
-         * 简化操作 暂时只支持4字以内字典检测
+         * 简化操作 暂时只支持6字以内字典检测
          * @param {string} str 
          */
 
     }, {
         key: "_getWords",
         value: function _getWords(str) {
-            for (var i = 1; i < 4; i++) {
+            for (var i = 1; i < 6; i++) {
                 var temp = MUTIL_PINYIN_TABLE[str.substring(0, i)];
                 if (typeof temp != 'undefined') {
                     return [str.substring(0, i)];
