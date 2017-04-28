@@ -11,8 +11,7 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
 * **零依赖**  
 
 * **词库灵活导入,打包**   
-可以自行调整字典，具体可以参照src/dict；所有资源调用由PinyinResource封装，可自行修改后打包
-
+可以自行调整字典，具体可以参照src/dict；所有资源调用由PinyinResource封装，可自行修改后打包  
 * **准确、完善的字库**  
 Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js能转换除46个异体字（异体字不存在标准拼音）之外的所有汉字  
 

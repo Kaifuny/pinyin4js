@@ -27,14 +27,20 @@ var PinyinResource = exports.PinyinResource = function () {
 
     _createClass(PinyinResource, null, [{
         key: "getPinyinResource",
+
+        //单字拼音字典库
         value: function getPinyinResource() {
             return _pinyinDict.pinyin_dict;
         }
+        //词组拼音字典库
+
     }, {
         key: "getMutilPinyinResource",
         value: function getMutilPinyinResource() {
             return _mutil_pinyinDict.mutil_pinyin_dict;
         }
+        //简繁对照库
+
     }, {
         key: "getChineseResource",
         value: function getChineseResource() {
