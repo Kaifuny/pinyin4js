@@ -210,7 +210,11 @@ export class PinyinHelper {
      * @param {string/char} c 
      */
     static hasMultiPinyin(c) {
-
+        var pinyin = PINYIN_TABLE[c];
+        if(typeof(c) != 'undefined'){
+            return pinyin.split(',').length > 1
+        }
+        return false;
     }
 
     static addPinyinDictResource(res) {

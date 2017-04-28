@@ -22,4 +22,12 @@ describe("# PinyinHelper", function() {
             PinyinHelper.getShortPinyin('厦门你好大厦厦门').should.eql('xmnhdsxm')
         })
     })
+    describe("* hasMultiPinyin(c)", function() {
+        it("PinyinHelper.hasMultiPinyin('厦') = true", function(){
+            PinyinHelper.hasMultiPinyin('厦').should.eql(true)
+        })
+        it("PinyinHelper.hasMultiPinyin('你') = false", function(){
+            PinyinHelper.hasMultiPinyin('你').should.eql(false)
+        })
+    })
 })

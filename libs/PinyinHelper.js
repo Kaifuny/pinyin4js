@@ -253,7 +253,13 @@ var PinyinHelper = exports.PinyinHelper = function () {
 
     }, {
         key: "hasMultiPinyin",
-        value: function hasMultiPinyin(c) {}
+        value: function hasMultiPinyin(c) {
+            var pinyin = PINYIN_TABLE[c];
+            if (typeof c != 'undefined') {
+                return pinyin.split(',').length > 1;
+            }
+            return false;
+        }
     }, {
         key: "addPinyinDictResource",
         value: function addPinyinDictResource(res) {
