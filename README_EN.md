@@ -11,7 +11,7 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
 
 ## Features
 * **Zero-dependency**  
-* **Folk & Package yourself easily**    
+* **Fork & Package yourself easily**    
 * **Support Traditional and Simplified Chinese**  
 * **Support multiple pinyin style**  
 
