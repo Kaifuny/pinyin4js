@@ -1,4 +1,4 @@
-[[English Document](https://github.com/superbiger/pinyin4js/blob/master/README.md)]
+[[English Document](https://github.com/superbiger/pinyin4js/blob/master/README_EN.md)]
 [[中文文档](https://github.com/superbiger/pinyin4js/blob/master/README.md)]
  
 ## pinyin4js  
