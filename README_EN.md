@@ -41,6 +41,8 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
 
 * **Init**
 ```
+    git clone https://github.com/superbiger/pinyin4js.git
+    cd pinyin4js
     npm install
 ```
 * **Build ES6 ---> ES5**
