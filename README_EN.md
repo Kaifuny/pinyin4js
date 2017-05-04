@@ -8,12 +8,14 @@
 <a href="https://www.npmjs.com/package/pinyin4js"><img src="https://img.shields.io/npm/l/pinyin4js.svg" alt="License"></a>  
 > A opensource javascript library for converting chinese to pinyin  
 Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)  
+> Demo Online: https://npm.runkit.com/pinyin4js  
 
 ## Features
 * **Zero-dependency**  
 * **Fork & Package yourself easily**    
 * **Support Traditional and Simplified Chinese**  
 * **Support multiple pinyin style**  
+* **Support Node and Browser**  
 
 ## How to use
 

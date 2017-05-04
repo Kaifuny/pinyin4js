@@ -10,6 +10,7 @@
 > A opensource javascript library for converting chinese to pinyin  
 Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)  
 > 注：同时支持Node和浏览器使用！！！
+> Demo Online: https://npm.runkit.com/pinyin4js
 
 ## Features
 * **零依赖**  
