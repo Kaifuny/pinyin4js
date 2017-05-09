@@ -7,7 +7,4 @@ var ChineseHelper = require('./libs/ChineseHelper');
     global.PinyinHelper = PinyinHelper.PinyinHelper;
     global.ChineseHelper = ChineseHelper.ChineseHelper;
 })();
-module.exports = PinyinFormat;
-module.exports = PinyinHelper;
-module.exports = ChineseHelper; 
 
