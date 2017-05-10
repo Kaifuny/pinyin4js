@@ -38,6 +38,12 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
     // WITH_TONE_NUMBER--数字代表声调，WITHOUT_TONE--不带声调，WITH_TONE_MARK--带声调
     // output: xià#mén#nǐ#hǎo#dà#shà#xià#mén
     console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '#', PinyinFormat.WITH_TONE_MARK))
+
+    // 首字母风格
+    // output: xmnhdsxm
+    console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '', PinyinFormat.FIRST_LETTER))
+    // or
+    console.log(PinyinHelper.getShortPinyin('厦门你好大厦厦门'))
 ```
 ## How to Dev
 

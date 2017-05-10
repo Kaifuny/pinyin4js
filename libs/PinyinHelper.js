@@ -21,7 +21,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var PinyinFormat = exports.PinyinFormat = {
     WITH_TONE_MARK: "WITH_TONE_MARK", //带声调
     WITHOUT_TONE: "WITHOUT_TONE", //不带声调
-    WITH_TONE_NUMBER: "WITH_TONE_NUMBER" //数字代表声调
+    WITH_TONE_NUMBER: "WITH_TONE_NUMBER", //数字代表声调
+    FIRST_LETTER: "FIRST_LETTER" //首字母风格
 };
 
 var PINYIN_TABLE = _PinyinResource.PinyinResource.getPinyinResource(); //单字字典
@@ -171,7 +172,11 @@ var PinyinHelper = exports.PinyinHelper = function () {
                     if (_ChineseHelper.ChineseHelper.isChinese(c) || c == CHINESE_LING) {
                         var pinyinArray = this._convertToPinyinArray(c, format);
                         if (pinyinArray.length > 0) {
-                            str_result += pinyinArray[0];
+                            if (format == PinyinFormat.FIRST_LETTER) {
+                                str_result += pinyinArray[0].charAt(0);
+                            } else {
+                                str_result += pinyinArray[0];
+                            }
                         } else {
                             str_result += str.charAt(i);
                         }
@@ -184,7 +189,11 @@ var PinyinHelper = exports.PinyinHelper = function () {
                     var words = commonPrefixList[commonPrefixList.length - 1];
                     var pinyinArray = this._formatPinyin(MUTIL_PINYIN_TABLE[words], format);
                     for (var j = 0, l = pinyinArray.length; j < l; j++) {
-                        str_result += pinyinArray[j];
+                        if (format == PinyinFormat.FIRST_LETTER) {
+                            str_result += pinyinArray[j].charAt(0);
+                        } else {
+                            str_result += pinyinArray[j];
+                        }
                         if (j < l - 1) {
                             str_result += separator;
                         }
@@ -206,44 +215,7 @@ var PinyinHelper = exports.PinyinHelper = function () {
     }, {
         key: "getShortPinyin",
         value: function getShortPinyin(str) {
-            str = _ChineseHelper.ChineseHelper.convertToSimplifiedChinese(str);
-            var i = 0;
-            var strLen = str.length;
-            var str_result = '';
-            while (i < strLen) {
-                var subStr = str.substring(i);
-                var commonPrefixList = this._getWords(subStr); //词组字典有的情况返回该起点下分词数组，没有的情况返回空数组
-                if (commonPrefixList.length == 0) {
-                    //不是词组
-                    var c = str.charAt(i);
-                    if (_ChineseHelper.ChineseHelper.isChinese(c) || c == CHINESE_LING) {
-                        var pinyinArray = this._convertToPinyinArray(c, PinyinFormat.WITHOUT_TONE);
-                        if (pinyinArray.length > 0) {
-                            str_result += pinyinArray[0].charAt(0);
-                        } else {
-                            str_result += str.charAt(i);
-                        }
-                    } else {
-                        str_result += c;
-                    }
-                    i++;
-                } else {
-                    //是词组
-                    var words = commonPrefixList[commonPrefixList.length - 1];
-                    var pinyinArray = this._formatPinyin(MUTIL_PINYIN_TABLE[words], PinyinFormat.WITHOUT_TONE);
-                    for (var j = 0, l = pinyinArray.length; j < l; j++) {
-                        str_result += pinyinArray[j].charAt(0);
-                        if (j < l - 1) {
-                            str_result += '';
-                        }
-                    }
-                    i += words.length;
-                }
-                if (i < strLen) {
-                    str_result += '';
-                }
-            }
-            return str_result;
+            return this.convertToPinyinString(str, '', PinyinFormat.FIRST_LETTER);
         }
 
         /**
