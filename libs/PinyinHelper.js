@@ -104,6 +104,8 @@ var PinyinHelper = exports.PinyinHelper = function () {
                 return this._convertWithToneNumber(str);
             } else if (format == PinyinFormat.WITHOUT_TONE) {
                 return this._convertWithoutTone(str);
+            } else if (format == PinyinFormat.FIRST_LETTER) {
+                return this._convertWithoutTone(str);
             }
             return [];
         }
