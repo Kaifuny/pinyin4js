@@ -71,16 +71,15 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
     git clone https://github.com/superbiger/pinyin4js.git
     cd pinyin4js
     npm install
-```
-* **Build ES6 ---> ES5**
-```
     npm run build
-```
+```  
+
 * **Build Browser**
 ```
     npm run build
     npm run build-browser
-```
+```  
+
 * **Test**
 ```
     npm run test

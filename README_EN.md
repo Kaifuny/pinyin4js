@@ -52,17 +52,16 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
     git clone https://github.com/superbiger/pinyin4js.git
     cd pinyin4js
     npm install
-```
-* **Build ES6 ---> ES5**
-```
     npm run build
-```
+```  
+  
 * **Build Browser**
 ```
     npm run build
     npm run build-browser
-```
+```  
+
 * **Test**
-```
+```  
     npm run test
 ```
