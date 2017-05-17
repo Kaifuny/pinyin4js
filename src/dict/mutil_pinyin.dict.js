@@ -836,5 +836,8 @@ export var mutil_pinyin_dict = {
     "一撮盐":"yīcuōyán",
     "一撮毛":"yīzuǒmáo",
     "枪杆":"qiānggǎn",
-    "烟杆":"yāngǎn"
+    "烟杆":"yāngǎn",
+    "东涌":"dōngchōng",
+    "西涌":"xīchōng",
+    "霞涌":"xiáchōng"
 }
