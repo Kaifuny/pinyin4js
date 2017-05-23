@@ -840,5 +840,6 @@ export var mutil_pinyin_dict = {
     "东涌":"dōngchōng",
     "西涌":"xīchōng",
     "东西涌":"dōngxīchōng",
-    "霞涌":"xiáchōng"
+    "霞涌":"xiáchōng",
+    "葵涌":"kuíchōng"
 }
