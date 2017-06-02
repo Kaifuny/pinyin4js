@@ -40,7 +40,7 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
     // output: xià#mén#nǐ#hǎo#dà#shà#xià#mén
     console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '#', PinyinFormat.WITH_TONE_MARK))
 
-    // 首字母风格
+    // first letter style
     // output: xmnhdsxm
     console.log(PinyinHelper.convertToPinyinString('厦门你好大厦厦门', '', PinyinFormat.FIRST_LETTER))
     // or
