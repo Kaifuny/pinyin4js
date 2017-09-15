@@ -1,6 +1,6 @@
 'use strict';
-var PinyinHelper = require('./src/PinyinHelper');
-var ChineseHelper = require('./src/ChineseHelper');
+var PinyinHelper = require('./lib/PinyinHelper');
+var ChineseHelper = require('./lib/ChineseHelper');
 
 ;(function(){
     global.PinyinHelper = PinyinHelper.PinyinHelper;
