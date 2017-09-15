@@ -1,6 +1,5 @@
 var should = require("should")
-import { PinyinFormat } from "../src/PinyinHelper.js"
-import { PinyinHelper } from "../src/PinyinHelper.js"
+require("../index")
 
 describe("# PinyinHelper", function() {
     describe("* convertToPinyinString(str, separator, format)", function() {
