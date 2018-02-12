@@ -7,6 +7,5 @@ var PinyinFormat = require('./lib/PinyinHelper');
     global.PinyinHelper = PinyinHelper.PinyinHelper;
     global.ChineseHelper = ChineseHelper.ChineseHelper;
     global.PinyinFormat = PinyinFormat.PinyinFormat;
-    console.log(global.PinyinFormat)
 })();
 
