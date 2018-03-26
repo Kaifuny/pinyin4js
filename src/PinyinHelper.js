@@ -61,7 +61,7 @@ export class PinyinHelper {
         for(var i = ALL_MARKED_VOWEL.length - 1; i >= 0; i--) {
             var originalChar = ALL_MARKED_VOWEL.charAt(i);
             var replaceChar = ALL_UNMARKED_VOWEL.charAt((i - i % 4) / 4);
-            str = str.replace(originalChar, replaceChar);
+            str = str.replace(new RegExp(originalChar,"gm"), replaceChar);
         }
         pinyinArray = str.replace("ü", "v").split(PINYIN_SEPARATOR);
         return pinyinArray;
