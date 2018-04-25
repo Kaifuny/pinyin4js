@@ -127,6 +127,8 @@ export class PinyinHelper {
      * @param {PinyinFormat} format 拼音格式：WITH_TONE_NUMBER--数字代表声调，WITHOUT_TONE--不带声调，WITH_TONE_MARK--带声调
      */
     static convertToPinyinString(str, separator, format) {
+        var result = ['']
+        var pos = 0
         str = ChineseHelper.convertToSimplifiedChinese(str);
         var i = 0;
         var strLen = str.length;
@@ -140,15 +142,17 @@ export class PinyinHelper {
                     var pinyinArray = this._convertToPinyinArray(c, format);
                     if(pinyinArray.length > 0) {
                         if(format == PinyinFormat.FIRST_LETTER){
-                            str_result += pinyinArray[0].charAt(0);
+                            pos++
+                            result[pos] = (pinyinArray[0].charAt(0))
                         }else{
-                            str_result += pinyinArray[0];
+                            pos++
+                            result[pos] = (pinyinArray[0]) + separator
                         }
                     }else{
-                        str_result += str.charAt(i)
+                        result[pos] += str.charAt(i)
                     }
                 } else {
-                    str_result += c;
+                    result[pos] += str.charAt(i)
                 }
                 i++;
             } else { //是词组
@@ -156,23 +160,31 @@ export class PinyinHelper {
                 var pinyinArray = this._formatPinyin(MUTIL_PINYIN_TABLE[words], format);
                 for(let j=0, l = pinyinArray.length; j < l; j++) {
                     if(format == PinyinFormat.FIRST_LETTER){
-                        str_result += pinyinArray[j].charAt(0);
+                        pos++
+                        result[pos] = (pinyinArray[j].charAt(0))
                     }else{
-                        str_result += pinyinArray[j];
-                    }
-                    if(j < l - 1) {
-                        str_result += separator
+                        pos++
+                        result[pos] = (pinyinArray[j]) + separator
                     }
                 }
                 i += words.length;
             }
-            if( i < strLen) {
-                if (str_result !== str.substring(0, i)) {
-                    str_result += separator
+        }
+        for( i in result) {
+            if (result[i] !== '') {
+                var reg=new RegExp(separator+"$")
+                if (reg.test(result[i])) {
+                    str_result += (result[i].replace('undefined', '').substring(0, result[i].length - separator.length) + separator)
+                } else {
+                    str_result += (result[i].replace('undefined', '') + separator)
                 }
             }
         }
-        return str_result;
+        if (str_result[str_result.length - 1] === separator) {
+            return str_result.substring(0, str_result.length - separator.length);
+        } else {
+            return str_result
+        }
     }
 
     /**
