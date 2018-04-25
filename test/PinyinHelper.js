@@ -19,6 +19,9 @@ describe("# PinyinHelper", function() {
         it("PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_NUMBER) = 'xia4,men2,ni3,hao3,da4,sha4,xia4,men2'", function(){
             PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_NUMBER).should.eql('xia4,men2,ni3,hao3,da4,sha4,xia4,men2')
         })
+        it("PinyinHelper.convertToPinyinString('JavaScript很好', ',', PinyinFormat.WITHOUT_TONE) = 'JavaScript hen hao'", function(){
+            PinyinHelper.convertToPinyinString('JavaScript 很好', ',', PinyinFormat.WITHOUT_TONE).should.eql('JavaScript hen,hao')
+        })
     })
     describe("* getShortPinyin(str)", function() {
         it("PinyinHelper.getShortPinyin('厦门你好大厦厦门') = 'xmnhdsxm'", function(){

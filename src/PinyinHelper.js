@@ -167,7 +167,9 @@ export class PinyinHelper {
                 i += words.length;
             }
             if( i < strLen) {
-                str_result += separator;
+                if (str_result !== str.substring(0, i)) {
+                    str_result += separator
+                }
             }
         }
         return str_result;

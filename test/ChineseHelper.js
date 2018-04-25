@@ -35,5 +35,8 @@ describe("# ChineseHelper", function() {
         it("ChineseHelper.isChinese('3') = false", function(){
             ChineseHelper.isChinese('3').should.eql(false)
         })
+        it("ChineseHelper.isChinese('J') = false", function(){
+            ChineseHelper.isChinese('J').should.eql(false)
+        })
     })
 })
