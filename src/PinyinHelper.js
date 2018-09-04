@@ -170,7 +170,7 @@ export class PinyinHelper {
                 i += words.length;
             }
         }
-        for( i in result) {
+        for(var i = 0; i < result.length; ++i) {
             if (result[i] !== '') {
                 var reg=new RegExp(separator+"$")
                 if (reg.test(result[i])) {
