@@ -16,6 +16,9 @@ describe("# PinyinHelper", function() {
         it("PinyinHelper.convertToPinyinString('脉脉', '', PinyinFormat.WITHOUT_TONE) = 'mo,mo'", function() {
             PinyinHelper.convertToPinyinString('脉脉','', PinyinFormat.WITHOUT_TONE).should.eql('momo')
         })
+        it("PinyinHelper.convertToPinyinString('假期', ',', PinyinFormat.WITH_TONE_MARK) = 'jià,qī'", function(){
+            PinyinHelper.convertToPinyinString('假期', ',', PinyinFormat.WITH_TONE_MARK).should.eql('jià,qī')
+        })
         it("PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_NUMBER) = 'xia4,men2,ni3,hao3,da4,sha4,xia4,men2'", function(){
             PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_NUMBER).should.eql('xia4,men2,ni3,hao3,da4,sha4,xia4,men2')
         })

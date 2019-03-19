@@ -247,7 +247,7 @@ export var mutil_pinyin_dict = {
     "系鞋带":"jì,xié,dài",
     "系绳子":"jì,shéng,zǐ",
     "放假":"fàng,jià",
-    "假期":"jà,qī",
+    "假期":"jià,qī",
     "请假":"qǐng,jià",
     "暑假":"shǔ,jià",
     "五更":"wǔ,gēng",
