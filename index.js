@@ -1,6 +1,7 @@
 'use strict';
 var PinyinHelper = require('./lib/PinyinHelper');
 var ChineseHelper = require('./lib/ChineseHelper');
+var PinyinFormat = require('./lib/PinyinHelper');
 
 var pinyin4js = {
     WITH_TONE_MARK      :"WITH_TONE_MARK",   //带声调

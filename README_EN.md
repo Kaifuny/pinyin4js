@@ -35,7 +35,7 @@ Thanks for [JPinyin](https://github.com/stuxuhai/jpinyin)
 #### Node
 
 ```javascript
-    //pinyin4js@1.3.11 or latest
+    //pinyin4js@1.3.16 or latest
     import pinyin4js from 'pinyin4js';
 
     // more detail methods in test

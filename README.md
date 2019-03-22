@@ -52,7 +52,7 @@ Unicode编码从4E00-9FA5范围及3007（〇）的20903个汉字中，pinyin4js�
 #### Node
 
 ```javascript
-    //pinyin4js@1.3.11 or latest
+    //pinyin4js@1.3.16 or latest
     import pinyin4js from 'pinyin4js';
 
     // more detail methods in test
