@@ -1,9 +1,13 @@
 var should = require("should")
 import { PinyinFormat } from "../src/PinyinHelper.js";
 import { PinyinHelper } from "../src/PinyinHelper.js";
+import pinyin4js from  '../index'
 
 describe("# PinyinHelper", function() {
     describe("* convertToPinyinString(str, separator, format)", function() {
+        it("PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_MARK) = 'xià,mén,nǐ,hǎo,dà,shà,xià,mén'", function(){
+            pinyin4js.convertToPinyinString('厦门你好大厦厦门', ',', pinyin4js.WITH_TONE_MARK).should.eql('xià,mén,nǐ,hǎo,dà,shà,xià,mén')
+        })
         it("PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_MARK) = 'xià,mén,nǐ,hǎo,dà,shà,xià,mén'", function(){
             PinyinHelper.convertToPinyinString('厦门你好大厦厦门', ',', PinyinFormat.WITH_TONE_MARK).should.eql('xià,mén,nǐ,hǎo,dà,shà,xià,mén')
         })
