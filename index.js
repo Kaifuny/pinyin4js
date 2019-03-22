@@ -25,5 +25,6 @@ var pinyin4js = {
     }
 }
 
-export default pinyin4js 
+export default {pinyin4js} 
+module.exports = pinyin4js
 
