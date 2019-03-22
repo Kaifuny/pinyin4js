@@ -3,3 +3,7 @@ test
 src
 
 node_modules
+
+.github
+
+.circleci
