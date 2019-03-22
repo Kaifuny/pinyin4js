@@ -25,5 +25,11 @@ var pinyin4js = {
     }
 }
 
+;(function(){
+    global.PinyinHelper = PinyinHelper.PinyinHelper;
+    global.ChineseHelper = ChineseHelper.ChineseHelper;
+    global.PinyinFormat = PinyinFormat.PinyinFormat;
+})();
+
 module.exports = pinyin4js
 
