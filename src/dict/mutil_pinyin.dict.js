@@ -1,4 +1,4 @@
-export var mutil_pinyin_dict = {
+﻿export var mutil_pinyin_dict = {
     "阿訇":"ā,hōng",
     "阿罗汉":"ā,luó,hàn",
     "阿木林":"ā,mù,lín",
@@ -841,5 +841,19 @@ export var mutil_pinyin_dict = {
     "西涌":"xīchōng",
     "东西涌":"dōngxīchōng",
     "霞涌":"xiáchōng",
-    "葵涌":"kuíchōng"
+    "葵涌":"kuíchōng",
+     "悬着":"xuán,zhè",
+"冲着":"chōng,zhē",
+"看着":"kàn,zhē",
+"着火":"zháo,huǒ",
+"省长":"shěng,zhǎng",
+"拼命挣扎":"pīn,mìng,zhēng,zhá",
+"扎破":"zhā,pò",
+"行情":"háng,qíng",
+"荷枪实弹":"hè,qīang,shí,dàn",
+"调动":"dìao,dòng",
+"调课":"tiáo,kè",
+"削弱":"xuē,ruò",
+"人参":"rén,shēn",
+"曾孙":"zēng,sūn"
 }
